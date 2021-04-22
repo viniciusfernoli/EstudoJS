@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: normal 14px sans-serif;
+            background-color: azure;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estudo do livro JavaScript Cap.1</h1>
+    <script>
+        var book = { // criação de um objeto, objetos ficam entre chaves
+            topic: "JavaScript",
+            fat: true
+            
+        }
+        book.author = 'Flanagan' // para adicionar novas propriedades sem colocar no objeto criado
+        book.contents = {} // declarar um objeto vazio
+        var primes = [2, 7, 8, 9] //declarar um array
+        primes[4] = 15 // adicionar por meio de atribuição um elemento no array
+        primes[0] = 1 //ou alterar o elemento por meio de um array
+        var vazio = [] // um array vazio, é possivel criar
+
+        document.write("Mostra oque tem dentro do elemento: ") //
+        document.write(book.author)//Ou document.write(book['author']) // mostrar oque tem dentro do book(objeto).author(propriedade do objeto)
+        document.write("<br>")
+        document.write("Imprimir um elemento no array prime de posição 0: ")
+        document.write(primes[0]) // imprime o array de posição 0
+        document.write("<br>")
+        document.write("Quantidade de elementos no array primes: ")
+        document.write(primes.length) // imprime qual a quantidade de elementos no array
+        document.write("<br>")
+        document.write("Imprime qual a quantidade de elementos no arrays como está vazio vai aparecer zero: ")
+        document.write(vazio.length) //mostrar  a quantidade de elementos no array
+        document.write("<br>")
+        document.write("Imprime a ultima posição do array: ")
+        document.write(primes[primes.length-1]) // para imprimir a ultima posição do array
+        document.write("<br>")
+
+        // os arrays e objetos podem conter outros arrays e objetos dentro
+        var points = [ // aqui se encontra um array com dois elementos dentro
+            {x:0, y:1}, // acada elemento é um objeto
+            {x:3, y:2} // cada elemento 
+        ] // o ecmascript mais novo não necessita de ponto e vírgula no js
+        var data = { //aqui se encontra um objeto com duas propriedades dentro
+            trial1: [[1,2], [3,4]], // o valor de cada propriedade é um array
+            trial2: [[2,3], [5,6]]  // os elementos dos arrays são outros arrays
+        }
+        document.write(points[1].y)//mandar escrever o array com dois elementos de objeto dentro
+        document.write("<br>")
+        document.write(data.trial1[0])//mandar escrever o objeto com
+        // As declarações das variáveis points e data, é conhecida como <expressão inicializadora> 
+        //veremos no capítulo 4, Expressões e operadores.
+        document.write("<br>")
+        document.write(points[0].y - points[1].x) // existe jeito de fazer operações aritiméticas com outros arrays
+        
+
+        
+
+        
+
+    </script>
+    
+</body>
+</html>
