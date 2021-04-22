@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Calculando mutas</h1> <!--h1 é para formar Título-->
+    Velocidade do carro: <input type="number" name="quilometro" id="quilometro"> km/h <!--Aqui criei um input para receber apenas números com o ID= 'Quilómetro'-->
+    <input type="button" value="Calcular" id = "verificar" onclick="clicar()"> <!--Aqui criei um input como botão no navegador com a função de clicar-->
+    <div id = "res"> Resultado </div> <!--div para mostrar o resultado-->
+
+    <script>
+
+        function clicar(){ // função com o nome clicar, que é o mesmo nome do botão
+        var txtkm = window.document.querySelector('input#quilometro') // aqui peguei o input com o ID quilometro e joguei dentro da variável txtkm, a saída é sempre em string do input.
+        var km = Number(txtkm.value) // estou mandando o valor que tem dentro do input e convertendo para NUMBER, porque a saída de input é sempre string
+        var res = window.document.getElementById('res') // estou mandando a div com id RES para a variavel res
+        res.innerHTML = `<p>Sua velocidade é de ${km} <strong>Km/h</strong></p>` // estou sobrescrevendo a div com o innerhtml (para usar o negrito), 
+        
+        if(km >= 60){ // fazendo o if para que se o km digitado no input for mais que 60 ele levará multa
+            res.innerHTML += `<p>Você foi <strong>MULTADO</strong></p>`
+        }else{
+            res.innerHTML += `<p>Dirija sempre com o cinto de segurança! </p>`
+        }
+
+        }
+
+
+    </script>
+</body>
+</html>

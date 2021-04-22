@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body {
+            background-color: rgb(68,125,199);
+            color: white;
+            font: normal 11pt sans-serif;
+        }
+        
+        div#area{
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Aula 09, SOBRE DOM</h1>
+    <div id="area"> <!-- Aqui é uma div com a função clicar e quando o mouse sair -->
+        aqui é um exemplo de div  <!-- aqui é o jeito de se fazer com html onclick='clicar()' onmouseout="saiu()"-->
+    </div>
+    <script>
+    var texto = window.document.getElementById('area')
+    var sair = window.document.querySelector('div#area')
+
+    texto.addEventListener('click', clicar) //usando eventlistener para adicionar  eventos
+    sair.addEventListener('mouseout', saiu) //usando addeventlistener para adicionar eventos
+
+    function clicar(){ // função para quando clicar substituit o texto para clicou e pintar de preto as letras
+    texto.innerText = 'Clicou'
+    texto.style.backgroundColor = 'black'
+    }
+
+    function saiu(){ // função para quando sair fazer um evento de colorir as letras de vermelho
+        sair.style.backgroundColor = 'red'
+        sair.innerText = 'Saiu'
+    }
+    </script>
+</body>
+</html>

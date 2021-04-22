@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR//">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania</title>
+    <style>
+        body{
+            background-color: beige;
+        }
+        div#res{
+            font: normal 15pt sans-serif;
+            background-color: rgba(143, 143, 143, 0.123);
+            height: 50px;
+            width: 400px;
+            margin-top: 50px;
+        }
+        input#pais{
+            height: 50px;
+            font: italic 15pt sans-serif;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você é Brasileiro?</h1>
+    Qual país você nasceu? <input type="text" name="pais" id="pais"> <!--input de texto para o cliente digitar com o id pais-->
+    <input type="button" value="verificar" onclick="verificar()"> <!--input de botão com a função de clicar e com a função do botão com nome de verificar()-->
+    <div id="res">Resultado</div> <!-- div com id res--> 
+
+    <script>
+
+        function verificar(){ // função chamando o botão input, com o mesmo nome
+            var txtpais = window.document.getElementById('pais') //pegando oque digitou no input com ID pais, e jogando na variavel txtpais
+            var pais = txtpais.value.toLowerCase() // pegando oque tem dentro da variavel txtpais e jogando dentro de pais no formato tudo minúsculo
+            var res = window.document.getElementById('res') // vinculando a div com ID res com a variavel res
+
+            if(pais == 'brasil'){ // condição para se oque o cliente digitou for igual a 'brasil'
+                res.innerHTML = 'Você é <strong>Brasileiro</strong>!!' // vai substituir a div com ID res por isso
+            }else if(pais == '') { // se o oque o cliente digitar for nada
+                window.alert('Escreva algo!') // vai mandar um alerta na página falando para escrever
+            }else { // se não for nada do que foi proposto em cima
+                res.innerHTML = 'Você não passa de um <strong>GRINGO</strong>!!' // vai escrever que é estrangeiro
+            }
+            
+        }
+    </script>
+</body>
+</html>
