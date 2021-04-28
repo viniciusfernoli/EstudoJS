@@ -1,0 +1,26 @@
+body{
+    background-color:rgb(39, 130, 248); /*Muda a cor de fundo do body*/
+    font: normal 15pt times;
+
+}
+header{
+    color: white;
+    text-align: center; /*Coloca o texto centralizado, no centro tendo como base o elemento pai*/
+}
+section{
+    width: 500px; /* coloca a largura como 500px */
+    background: white; /*coloca  o fundo do section como branco */
+    border-radius: 10px; /* coloca uma borda arredondada no section */
+    padding: 15px; /* utiliza um espaçamento de 10px para todos os lados */
+    margin: auto;  /*para centralizar utiliza "auto", utilizar margin para dar margin para todos os lados*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411); /*cria uma sombra em volta do section*/
+}
+footer{ /*utilizado para rodapé*/
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+div{
+    text-align: center;
+    padding: 10px;
+}
